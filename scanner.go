@@ -95,7 +95,7 @@ func (s *byteScanner) scan() string {
 	tok.Reset()
 	tok.WriteRune(s.ch)
 	s.nextChar()
-	for s.ch != -1 && !s.isSpace() && !s.isEol() {
+	for s.ch != -1 && !s.isEol() {
 		// Do not consider ":" to be a token separator if a first key token
 		// has already been found on this line (avoid cutting an absolute URL
 		// after the "http:")
